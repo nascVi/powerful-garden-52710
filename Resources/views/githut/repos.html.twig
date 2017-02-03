@@ -1,0 +1,20 @@
+<div class="well">
+            Key nums:
+
+            <div class="pull-right">
+                <span class="label label-primary">Repositories: {{ repo_count }}</span>
+                <span class="label label-success">Most Stars: {{ most_stars }}</span>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">Repo List</h4>           
+            </div>
+
+            <ul class="list-group">
+                {% for repo in repos %}
+                    <li class="list-group-item">{% include ':githut:repo.html.twig' %}</li>
+                {% endfor %}
+            </ul>
+        </div>
